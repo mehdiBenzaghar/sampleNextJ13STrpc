@@ -10,7 +10,7 @@ const processEnv = {
   // Node
   NODE_ENV: process.env.NODE_ENV,
   // Prisma
-  DATABASE_URL: process.env.DATABASE_URL,
+  //DATABASE_URL: process.env.DATABASE_URL,
 
 }
 
@@ -19,8 +19,7 @@ const processEnv = {
  * built with invalid env vars. To expose them to the client, prefix them with `NEXT_PUBLIC_`.
  */
 const client = z.object({
-  // Clerk Auth
-  NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z.string().startsWith("pk_"),
+  // Next ENV vars
 })
 
 /**
@@ -32,7 +31,7 @@ const server = z.object({
   // Node
   NODE_ENV: z.enum(["development", "test", "production"]),
   // Prisma
-  DATABASE_URL: z.string().url(),
+  //DATABASE_URL: z.string().url(),
 
 })
 

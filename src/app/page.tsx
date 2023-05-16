@@ -20,7 +20,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-             {"TRPC is ok if you see Helloword :"+sample.data ?? 'loading...'  }
+             {"TRPC is ok if you see Hello word :"+sample.data?.text ?? 'loading...'  }
           </a>
         </div>
       </div>

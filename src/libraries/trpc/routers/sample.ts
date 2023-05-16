@@ -2,7 +2,7 @@
 import { t, publicProcedure } from "../trpc"
 
 export const sampleRouter = t.router({
-  get: publicProcedure.query(async ({ input, ctx }) => {
+  get: publicProcedure.query(() => {
       return { text: "Hello world!" }
   }),
 })
