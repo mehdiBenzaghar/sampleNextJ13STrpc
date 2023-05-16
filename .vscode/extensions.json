@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss", // tailwind intellissense
+    "dbaeumer.vscode-eslint", // linter for typescript
+    "EditorConfig.EditorConfig", // use .editorconfig file
+  ]
+}

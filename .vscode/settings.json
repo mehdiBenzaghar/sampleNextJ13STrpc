@@ -1,0 +1,46 @@
+{
+  // TYPESCRIPT
+  // ==========
+  // use the tsdk from the project, not vscode one
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  // EDITOR
+  // ==========
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  // LINT
+  // ==========
+  // main entry point is eslint to avoid conflicts
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "prettier.enable": false,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "eslint.run": "onSave",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  // autofix errors detected by eslint when possible
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  // avoid eslint(prettier) conflicts on sorting classes names with headwind plugin
+  "headwind.runOnSave": false,
+  // avoid eslint(prettier) conflicts on spaces between empty brackets
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  // CSS
+  // ==========
+  // tailwind is in charge to validate the css
+  "css.validate": false,
+  // tailwind autocomplete when editing strings (TODO: is it working?)
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  // TAILWIND
+  // ==========
+  "tailwindCSS.experimental.classRegex": ["tw`(.+?)`"],
+  // GITHUB
+  // ==========
+  "githubPullRequests.ignoredPullRequestBranches": ["develop"],
+}

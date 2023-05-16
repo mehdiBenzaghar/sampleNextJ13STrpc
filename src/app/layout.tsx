@@ -1,12 +1,13 @@
 import { Metadata } from "next";
 import { TRPCProvider } from "@/libraries/trpc/provider";
-import "@/styles/globals.css";
 import { inter } from "@/styles/fonts"
+import "@/styles/globals.css";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://google.com"),
+  metadataBase: new URL("https://myapp.com"),
   title: {
     default: "",
-    template: "e",
+    template: "%s - App name",
   },
   description: "",
   openGraph: {
@@ -35,9 +36,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
- 
   icons: {
-    shortcut: "/favicon.png",
+    shortcut: "/favicon.ico",
   },
 };
 
@@ -53,11 +53,9 @@ export default async function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="min-h-screen antialiased">
-     
-          <TRPCProvider>
-            {children}
-          </TRPCProvider>
- 
+        <TRPCProvider>
+          {children}
+        </TRPCProvider>
       </body>
     </html>
   );

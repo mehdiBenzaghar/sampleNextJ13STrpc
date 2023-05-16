@@ -4,7 +4,6 @@
     "bracketSameLine": true,
     "arrowParens": "avoid",
     "singleAttributePerLine": true,
-    "organizeImportsSkipDestructiveCodeActions": true,
     "plugins": [
         "prettier-plugin-tailwindcss"
     ]
